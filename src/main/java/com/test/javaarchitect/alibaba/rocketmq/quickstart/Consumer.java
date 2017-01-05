@@ -16,14 +16,26 @@ import java.util.List;
 public class Consumer {
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("quickstart_consumer");
+        consumer.setNamesrvAddr("ip:9876");
 
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
-        
-        consumer.subscribe("TopicQuickStart","*");
 
+        consumer.subscribe("TopicQuickStart","*");
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
-                System.out.println(Thread.currentThread().getName() + "Receive New Message " + msgs );
+                //System.out.println(Thread.currentThread().getName() + "Receive New Message " + msgs );
+                try {
+                    for (MessageExt msg : msgs) {
+                        String topic = msg.getTopic();
+                        String messageBody = new String(msg.getBody(), "utf-8");
+                        String tags = msg.getTags();
+                        System.out.println("收到消息->topic:"+topic+",tags:"+tags+",message:"+messageBody);
+                    }
+                }catch(Exception ex) {
+                    ex.printStackTrace();
+                    return ConsumeConcurrentlyStatus.RECONSUME_LATER;
+                }
+
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
             }
         });

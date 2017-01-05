@@ -17,6 +17,9 @@ import com.alibaba.rocketmq.remoting.exception.RemotingException;
 public class Producer {
     public static void main(String[] args) throws MQClientException, RemotingException, InterruptedException, MQBrokerException {
         DefaultMQProducer producer = new DefaultMQProducer("quickstart_producer");
+
+        producer.setNamesrvAddr("ip:9876");
+        producer.setRetryTimesWhenSendFailed(1);//Producer retry count when send message error or overtime
         producer.start();
         try {
             for (int i = 0; i < 100; i++) {
