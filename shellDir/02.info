@@ -1,0 +1,11 @@
+2017-01-15
+disk info:
+Filesystem      Size   Used  Avail Capacity  iused    ifree %iused  Mounted on
+/dev/disk1     233Gi  133Gi   99Gi    58% 34915283 26070059   57%   /
+devfs          181Ki  181Ki    0Bi   100%      626        0  100%   /dev
+map -hosts       0Bi    0Bi    0Bi   100%        0        0  100%   /net
+map auto_home    0Bi    0Bi    0Bi   100%        0        0  100%   /home
+
+online users:
+memory info:
+
