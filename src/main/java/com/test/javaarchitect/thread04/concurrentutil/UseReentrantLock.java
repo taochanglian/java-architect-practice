@@ -35,20 +35,20 @@ public class UseReentrantLock {
 	
 	
 	public static void main(String[] args) {
-		UseReentrantLock url = new UseReentrantLock();
-		Thread t1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				url.method1();
-				url.method2();
-			}
-		});
-		t1.start();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		UseReentrantLock url = new UseReentrantLock();
+//		Thread t1 = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				url.method1();
+//				url.method2();
+//			}
+//		});
+//		t1.start();
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 }

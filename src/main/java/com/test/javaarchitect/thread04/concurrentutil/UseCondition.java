@@ -38,22 +38,22 @@ public class UseCondition {
 	
 	
 	public static void main(String[] args) {
-		UseCondition uc = new UseCondition();
-		Thread t1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				uc.method1();
-			}
-		});
-		Thread t2 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				uc.method2();
-			}
-		});
-		
-		t1.start();
-		t2.start();
+//		UseCondition uc = new UseCondition();
+//		Thread t1 = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				uc.method1();
+//			}
+//		});
+//		Thread t2 = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				uc.method2();
+//			}
+//		});
+//
+//		t1.start();
+//		t2.start();
 	}
 
 }

@@ -49,8 +49,8 @@ public class UseQueue {
 //		}
 		
 		
-		SynchronousQueue<String> queue = new SynchronousQueue<>();//不可以初始化
-		queue.add("hello");//会抛异常，此队列不可以加元素
+		//SynchronousQueue<String> queue = new SynchronousQueue<>();//不可以初始化
+		//queue.add("hello");//会抛异常，此队列不可以加元素
 		
 	}
 }
