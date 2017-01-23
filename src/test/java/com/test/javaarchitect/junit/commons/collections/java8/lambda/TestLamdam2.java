@@ -1,4 +1,4 @@
-package com.test.javaarchitect.junit.commons.collections.java8;
+package com.test.javaarchitect.junit.commons.collections.java8.lambda;
 
 import com.test.javaarchitect.java8.MyFunc;
 import org.junit.Test;

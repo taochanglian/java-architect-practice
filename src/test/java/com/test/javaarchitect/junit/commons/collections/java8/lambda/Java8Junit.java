@@ -1,8 +1,7 @@
-package com.test.javaarchitect.junit.commons.collections.java8;
+package com.test.javaarchitect.junit.commons.collections.java8.lambda;
 
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -40,10 +39,11 @@ public class Java8Junit {
             new Employee(1,"tianqi",2,50.0)
     );
     @Test
-    public void test3(){
-        list.stream().filter((e)->e.getAge()>=30).forEach(System.out::println);
-        list.stream().filter((e)->e.getAge()>=30).limit(2).forEach(System.out::println);
+    public void test3() {
+        list.stream().filter((e) -> e.getAge() >= 30).forEach(System.out::println);
+        list.stream().filter((e) -> e.getAge() >= 30).limit(2).forEach(System.out::println);
         System.out.println("-----------遍历所有的名字----------");
         list.stream().map(Employee::getUsername).forEach(System.out::println);
     }
+
 }
